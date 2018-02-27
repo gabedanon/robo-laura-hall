@@ -1,6 +1,15 @@
-# robo
+# robo-laura-hall
 
 > Hello my name is Robo Laura Hall
+
+## About
+
+This code is the basis of Robo Laura Hall, the robotic producter on the [Trends with Benefits](http://twb.cool) podcast. She is very sassy and unprofessional, and she makes use of these native browser features:
+
+* [SpeechSynthesis](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis)
+* [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) and [LocalStorage](https://developer.mozilla.org/en-US/docs/Web/API/Storage/LocalStorage) via [localForage](https://github.com/localForage/localForage)
+
+As such, probably only works in Chrome. Due to her general volatility, we have not dared to try another browser.
 
 ## Build Setup
 
