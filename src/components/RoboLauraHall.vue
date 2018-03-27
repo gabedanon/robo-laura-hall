@@ -116,9 +116,6 @@ export default {
   name: 'RoboLauraHall',
   data: () => ({
     catchphrases: [],
-    trends: [],
-    questions: [],
-    plugs: [],
     utterance: new SpeechSynthesisUtterance(),
     fab: true,
     text: '',
@@ -127,15 +124,10 @@ export default {
     scrolled: false,
     speedDialOpen: false,
     newUtterance: {
-      type: 'Trend',
+      type: 'Catchphrase',
       text: ''
     },
     addingUtterance: false,
-    utteranceTypes: [
-      'Trend',
-      'Question',
-      'Catchphrase'
-    ],
     defaultCatchphrases: [
       'Hello my name is Robo Laura Hall',
       `I'm Horny`,
@@ -237,8 +229,7 @@ export default {
         this.cancelEdit()
       })
     },
-    addUtterance (type = 'Catchphrase') {
-      this.newUtterance.type = type
+    addUtterance () {
       this.addingUtterance = true
     },
     cancelEdit () {

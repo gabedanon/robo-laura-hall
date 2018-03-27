@@ -14,7 +14,7 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    setVoices ({commit, state}, payload) {
+    setVoices ({commit, state}) {
       state.synth.onvoiceschanged = () => {
         const voices = state.synth.getVoices()
         commit('SET_VOICES', voices)
