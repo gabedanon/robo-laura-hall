@@ -198,7 +198,6 @@ export default {
       this.$setItem('catchphrases', this.defaultCatchphrases, (err, value) => {
         if (err) console.error(err.stack)
         this.catchphrases = this.defaultCatchphrases
-        console.log(value)
       })
     },
     saveCatchphrase () {
@@ -224,18 +223,18 @@ export default {
       })
     },
     saveUtterance () {
-      this.saveCatchphrase()
+      const vm = this
+      vm.saveCatchphrase()
       process.nextTick(() => {
-        this.cancelEdit()
+        vm.cancelEdit()
       })
     },
     addUtterance () {
       this.addingUtterance = true
     },
     cancelEdit () {
-      const vm = this
-      vm.newUtterance.text = ''
-      vm.addingUtterance = false
+      this.newUtterance.text = ''
+      this.addingUtterance = false
     }
   },
   computed: {
@@ -274,7 +273,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .rlhIcon {
   width: 60px;
@@ -291,6 +289,4 @@ export default {
 .rlhRow {
   margin-bottom: -25px;
 }
-
-
 </style>
